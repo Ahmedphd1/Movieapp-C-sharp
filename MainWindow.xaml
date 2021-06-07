@@ -1,0 +1,84 @@
+﻿<Window x:Class="wpfapp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfapp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="500">
+    <Grid>
+        <!--Fane for Tilføj rate.. Denne fane tilføjer data til databasen-->
+        <TabControl HorizontalAlignment="Right" Width="492">
+            <TabItem Name="tabitems" Header="Tilføj rate">
+                <StackPanel>
+                    <Label Name="labeltekst"  VerticalAlignment="Center" Content="Tilføj fødselsrate:" Margin="190,100,100,150" FontSize="20"/>
+                    <TextBox Name="land" Text="land" TextAlignment="Center" Margin="100,-100,100,100"/>
+                    <TextBox Name="verdensdel1" Text="verdensdel1" TextAlignment="Center" Margin="100,-100,100,100"/>
+                    <TextBox Name="verdensdel2" Text="verdensdel2" TextAlignment="Center" Margin="100,-100,100,100"/>
+                    <TextBox Name="rang" Text="rang" TextAlignment="Center" Margin="100,-100,100,100"/>
+                    <TextBox Name="fødselsrate" Text="fødselsrate" TextAlignment="Center" Margin="100,-100,100,100"/>
+                    <Button Content="_OK" Click="Button_Click"/>
+                </StackPanel>
+            </TabItem>
+
+            <!--Fane for slet rate.. Denne fane sletter data fra databasen-->
+            <TabItem Name="sletfilm" Header="Slet rate">
+                <StackPanel>
+                    <Label VerticalAlignment="Center" Content="Vælg fødselsrate at slette" Margin="170,100,95,150" FontSize="15"/>
+                    <ComboBox Name="combobox" Margin="170,-100,190,100" Height="20"/>
+                    <Button Content="_OK" Click="Button_Click_1"/>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Name="Redigerfilm" Header="Rediger rate">
+                <StackPanel>
+                    <Label Name="labeledit" VerticalAlignment="Center" Content="Vælg film at rediger" Margin="152,50,67,150" FontSize="20" Height="49"/>
+                    <TextBox x:Name="boxedit" Text="Rediger fødselsrate/rang" TextAlignment="Center" Margin="100,-50,100,100"/>
+                    <Button Content="_OK" Click="Button_Click_2"/>
+
+                    <ComboBox Name="deletecombo" Margin="152,-150,142,50" Height="20"/>
+                </StackPanel>
+            </TabItem>
+
+            <!--Fane for login.. Denne fane søger login information i databasen-->
+            <TabItem Name="login" Header="Login">
+                <StackPanel>
+                    <Label Name="labeltekst1"  VerticalAlignment="Center" Content="Login:" Margin="190,100,190,150" FontSize="20"/>
+                    <TextBox Name="brugernavn" Text="Brugernavn" TextAlignment="Center" Margin="100,-100,100,100"/>
+                    <TextBox Name="kodeord" Text="Kodeord" TextAlignment="Center" Margin="100,-100,100,100"/>
+                    <Button Content="_OK" Click="Button_Click_3"/>
+                </StackPanel>
+            </TabItem>
+
+            <!--Fane for vis data.. Denne fane viser data fra databasen-->
+            <TabItem Name="visdata" Header="Vis data">
+                <StackPanel>
+                    <Label Name="labeltekst2" VerticalAlignment="Center" Content="Vis data:" Margin="190,100,190,150" FontSize="20"/>
+                    <TextBlock Height="267" x:Name="textblock" Margin="10,-140,20,0"/>
+                    <Button Content="_OK" Click="Button_Click_4"/>
+                </StackPanel>
+            </TabItem>
+
+            <!--Fane for opret bruger.. Denne fane opretter bruger i databasen-->
+            <TabItem Name="opretbruger" Header="Opret bruger">
+                <StackPanel>
+                    <Label Name="labeltekst3" VerticalAlignment="Center" Content="Opret bruger:" Margin="190,100,190,150" FontSize="20"/>
+                    <TextBox Name="brugernavnopret" Text="Brugernavnopret" TextAlignment="Center" Margin="100,-100,100,100"/>
+                    <TextBox Name="kodeordopret" Text="Kodeordopret" TextAlignment="Center" Margin="100,-100,100,100"/>
+                    <TextBox Name="role" Text="role" TextAlignment="Center" Margin="100,-100,100,100"/>
+                    <Button Content="_OK1" Click="Button_Click_5"/>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Name="nulstilkode" Header="nulstilkode">
+                <StackPanel>
+                    <Label Name="labeltekst4" VerticalAlignment="Center" Content="nulstilkode:" Margin="190,100,190,150" FontSize="20"/>
+                    <TextBox Name="brugernavnnulstil" Text="brugernavnnulstil" TextAlignment="Center" Margin="100,-100,100,100"/>
+                    <TextBox Name="kodeordnulstil" Text="kodeordnulstil" TextAlignment="Center" Margin="100,-100,100,100"/>
+                    <Button Content="_OK2" Click="Button_Click_6"/>
+                </StackPanel>
+            </TabItem>
+
+        </TabControl>
+    </Grid>
+</Window>
